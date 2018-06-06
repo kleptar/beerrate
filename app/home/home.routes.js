@@ -5,7 +5,7 @@ angular.module("beer-rate.home").config(function ($stateProvider){
             name: "beer-rate-home-root",
             url: "",
             controller: "HomeController",
-            controllerAs: "hcvm",
+            controllerAs: "vm",
             templateUrl: "app/home/home.html"
     });
 });

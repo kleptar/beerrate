@@ -1,5 +1,8 @@
 <div>
-    <div ng-repeat="beer in hcvm.beers">
+    <div ng-repeat="beer in vm.beers">
         <li>{{beer}}</li>
     </div>
+    <craft-of-the-week beer="vm.beerOfTheWeek" props-beer="vm.propsThisBeer">
+
+    </craft-of-the-week>
 </div>
