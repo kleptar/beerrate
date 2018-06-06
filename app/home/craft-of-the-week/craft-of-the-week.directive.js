@@ -10,9 +10,6 @@ angular.module("beer-rate.home").directive("craftOfTheWeek", function(){
         controllerAs: "vm",
         templateUrl: "/app/home/craft-of-the-week/craft-of-the-week.html"
     }
-
-
-
 });
 
 

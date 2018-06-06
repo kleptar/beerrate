@@ -1,0 +1,10 @@
+<div>
+Top beers in BR.local 
+    <div  ng-repeat="beer in vm.beers | orderBy: '-rate' | limitTo: 3">
+        <div class="beerPodium">
+            {{beer.name}} 
+            Manufactured by: {{beer.brewery}} 
+            rate: {{beer.rate}}
+        </div>
+   </div>
+</div>

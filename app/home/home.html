@@ -1,11 +1,6 @@
-<div class="row">
-    <div class="col-md-6">
-    <div ng-repeat="beer in vm.beers">
-        <li>{{beer.name}}</li>
-    </div>
-    <craft-of-the-week beer="vm.beerOfTheWeek" props-beer="vm.propsThisBeer">
 
-    </craft-of-the-week>
-</div>
-<div class="col-md-6">Druga kolumna</div>
-</div>
+<header></header>
+<list-beers beers="vm.beers" ></list-beers>
+<craft-of-the-week beer="vm.beerOfTheWeek" props-beer="vm.propsThisBeer"></craft-of-the-week>
+<top-3 beers="vm.beers" ></top-3>
+<latest-news></latest-news>
