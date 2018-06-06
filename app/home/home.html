@@ -1,22 +1,12 @@
-<div class="openbtn"><i class="fas fa-bars" ng-click="vm.openNav()" ></i></div>
-<div id="mySidenav" class="sidenav">
-    <div class="closebtn" ng-click="vm.closeNav()">x</div>
-    <div class="menuitem">News</div>
-    <div class="menuitem">Browse beers</div>
-    <div class="menuitem">Rate beer</div>
-</div>
-<div id="main">
-    <div ng-init="vm.initBeerList()" class="row">
-        <header>Welcome to beer rate!</header>
+<div id="main" ng-init="vm.initBeerList()" class="row">
+    <header class="header"></header>
+    <div class="col-md-3">
+        <top-3 beers="vm.beers" ></top-3>
     </div>
-    <div ng-init="vm.initBeerList()" class="row">
-        <div class="col-md-3">
-                <craft-of-the-week beer="vm.beerOfTheWeek" props-beer="vm.propsThisBeer"></craft-of-the-week>
-                <top-3 beers="vm.beers" ></top-3>
-                <latest-news></latest-news>
-        </div>
-        <div class="col-md-9">
-                <list-beers beers="vm.beers" ></list-beers>
-        </div>
+    <div class="col-md-6">
+        <list-beers beers="vm.beers" ></list-beers>
+    </div>
+    <div class="col-md-3">
+            <craft-of-the-week beer="vm.beerOfTheWeek" props-beer="vm.propsThisBeer"></craft-of-the-week>
     </div>
 </div>

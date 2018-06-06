@@ -11,16 +11,4 @@ angular.module("beer-rate.home").controller("HomeController", function(beerServi
         beerToProp.rate +=1;
         alert("Voted for: " + beerToProp.name);
     }
-
-	vm.openNav = function(){
-        document.getElementById("mySidenav").style.width = "250px";
-        document.getElementById("main").style.marginLeft = "250px";
-        
-	}
-	
-	vm.closeNav = function(){
-        document.getElementById("mySidenav").style.width = "0px";
-        document.getElementById("main").style.marginLeft = "0px";
-
-    }
 });
