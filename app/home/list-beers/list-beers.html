@@ -1,7 +1,10 @@
-<div class="row">
+<div ng-init="vm.initBeerList()" class="row">
     <div class="col-md-6">
-        <div  ng-repeat="beer in vm.beers">
-                <div class="beerName">{{beer.name}}</div> <div class="beerDetails">Manufactured by: {{beer.brewery}} rate: {{beer.rate}}</div>
+        <div class="list-group" ng-repeat="beer in vm.beersToShow">
+            <button type="button" ng-click="vm.toggleBeerDetails(beer.id)" id="beer-in-row-{{beer.id}}" class="list-group-item list-group-item-action">{{beer.name}} 
+                <span class="badge badge-secondary">{{beer.rate}}</span> 
+            </button>
+            <div ng-if="beer.showDetails" class="list-group-item disabled">Manufactured by: {{beer.brewery}} rate: {{beer.rate}}</div>
         </div>
     </div>
 </div>
