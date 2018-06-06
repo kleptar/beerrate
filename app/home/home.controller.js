@@ -1,9 +1,10 @@
-angular.module("beer-rate.home").controller("HomeController", function(){
+angular.module("beer-rate.home").controller("HomeController", function(beerService){
     var vm = this;
     vm.zm1 = "zmienna";
-    vm.beers = ["Pale ale","IPA","AIPA","APA","Blonde Ale","Witbier","Stout","RIS","Porter"];
+    vm.beers = beerService.getBeers();
+
     vm.beerOfTheWeek = vm.beers[2];
-    vm.propsTheBeer = function(beer){
-        alert("lubisz to suko! " + beer);
+    vm.propsThisBeer = function(beerToProp){
+        alert("lubisz to suko! " + beerToProp);
     }
 });
