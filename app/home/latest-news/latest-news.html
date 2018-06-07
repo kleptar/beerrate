@@ -1,7 +1,7 @@
 <div>
-    <div  ng-repeat="news in vm.news | orderBy: '-dateAdded' | limitTo: 1">
-        <div class="lastestNews">
-            {{news.content}}
+    <div ng-repeat="news in vm.news | orderBy: '-dateAdded' | limitTo: 1">
+        <div class="newsbox">
+            <div class="hotnews newsbox">Hot:</div> {{news.content}}
         </div>
     </div>
 </div>

@@ -1,0 +1,9 @@
+.hotnews{
+    font-weight: bold;
+    color: #f12b2b6e;
+} 
+.newsbox{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,7 +1,10 @@
 angular.module("beer-rate.home").controller("ListBeerController", function(){
     var vm = this;
     vm.beersToShow = [];
-    var activeBeer = -1;
+    var activeBeer = resetActiveBeer();
+    var idPrefix = "beer-in-row-";
+    var activeClass = "active";
+
     vm.initBeerList = function(){
         vm.beersToShow = vm.beers;
         angular.forEach(vm.beersToShow,function(value, key) {
@@ -16,8 +19,12 @@ angular.module("beer-rate.home").controller("ListBeerController", function(){
             return (beer.id == beerToMark);
         })[0];
         deactivateListElements();
-        if (activeBeer==beerToMark) return;
-        document.getElementById("beer-in-row-" + beerToMark).classList.add('active');
+        if (activeBeer==beerToMark) 
+        {
+            activeBeer = resetActiveBeer()
+            return;
+        }
+        document.getElementById(idPrefix + beerToMark).classList.add(activeClass);
         selectedBeer.showDetails = true;
         activeBeer = beerToMark;
     }
@@ -25,9 +32,13 @@ angular.module("beer-rate.home").controller("ListBeerController", function(){
     function deactivateListElements(){
         angular.forEach(vm.beersToShow,function(value, key) {
             value.showDetails = false;
-            if ( document.getElementById("beer-in-row-" + value.id).classList.contains('active') ) {
-                document.getElementById("beer-in-row-" + value.id).classList.remove('active');
+            if ( document.getElementById(idPrefix + value.id).classList.contains(activeClass) ) {
+                document.getElementById(idPrefix + value.id).classList.remove(activeClass);
             }
         }); 
+    }
+
+    function resetActiveBeer(){
+        return -1;
     }
 });
