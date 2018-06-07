@@ -1,0 +1,28 @@
+.beer {
+    height: auto;
+    margin: 0px auto;
+    padding: 20px;
+    background-color:white;
+    text-align:justify;
+}
+
+.big{
+    font-size: 1.2rem;
+    text-transform:uppercase;
+    color:rgb(71, 104, 104);
+    font-weight:bold;
+}
+
+.beer-span{
+    font-weight:lighter;
+
+}
+.rate {
+    text-align: right;
+    font-weight: bold;
+}
+
+.beer-right {
+    float: left;
+    margin-right: 20px;
+}

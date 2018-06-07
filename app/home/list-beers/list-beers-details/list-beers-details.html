@@ -1,5 +1,8 @@
-<div ng-init="vm.init()">
-        <div>Manufactured by: {{vm.beer.brewery}} rate: {{vm.beer.rate}}</div>
-        <div>{{vm.beer.description}}</div> 
-        <div><img src="{{vm.beer.imgSmall}}"></div>
+<div class="beer" ng-init="vm.init()">
+    <p class="big">Manufactured by: <span class="beer-span">{{vm.beer.brewery}} </span></p>
+    <p>
+        <img class="beer-right" src="{{vm.beer.imgSmall}}" />
+        {{vm.beer.description}}
+    </p>
+    <p class="rate">Rate: {{vm.beer.rate}}</p>
 </div>
