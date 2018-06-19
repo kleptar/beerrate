@@ -35,10 +35,11 @@ angular.module("beer-rate.home").config(function ($stateProvider){
            name: "beer-rate-home-root.rate",
            url: "\rate",
            params: {
-            beers: {}
-            },
-            controller: "RateBeerController",
-            controllerAs: "vm",
+                beers: {},
+                propBeer: {}
+           },
+           controller: "RateBeerController",
+           controllerAs: "vm",
            template: "<rate-beer></rate-beer>"
    })
     

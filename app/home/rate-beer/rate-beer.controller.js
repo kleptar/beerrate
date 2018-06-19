@@ -5,7 +5,12 @@ angular.module("beer-rate.home").controller("RateBeerController", function($stat
         vm.beersToShow = $stateParams.beers;//vm.beers;
     }
 
-    vm.propsTheBeer = function(id){
-        alert(id);        
+    vm.propsTheBeer = function(beerIdtoProp){
+        var beerToProp = vm.beersToShow.filter(function (beer) {
+            return (beer.id == beerIdtoProp);
+        })[0];
+        beerToProp.rate +=1;
+        alert("Voted for: " + beerToProp.name);
     }
+
 });

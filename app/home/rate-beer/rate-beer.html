@@ -1,6 +1,6 @@
 <div ng-init="vm.initBeerList()">
     <div class="list-group rateBeerItem" ng-repeat="beer in vm.beersToShow">
-            <div type="badge" id="beer-in-row-{{beer.id}}" class="list-group-item list-group-item-action">{{beer.name}} 
+            <div type="badge" id="beer-in-row-{{beer.id}}" class="list-group-item list-group-item-action disabled">{{beer.name}} 
                 <span class="badge badge-secondary">{{beer.rate}}</span> 
                 <span class="likeBeer" ng-click="vm.propsTheBeer(beer.id)"><i  class="fas fa-thumbs-up"></i></span> 
             </div>
