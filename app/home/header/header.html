@@ -4,7 +4,7 @@
 <div class="togglemenubtn" ng-Click="vm.toggleNav()">Menu</div>
 <div id="myTopnav" class="topnav">
     <div class="menuitem" ui-sref="beer-rate-home-root.news">News</div>
-    <div class="menuitem" ui-sref="beer-rate-home-root.browse-beers">Browse beers</div>
-    <div class="menuitem" ui-sref="beer-rate-home-root.rate-beer">Rate beer</div>
+    <div class="menuitem" ui-sref="beer-rate-home-root.browse({beers: vm.beers})">Browse beers</div>
+    <div class="menuitem" ui-sref="beer-rate-home-root.rate">Rate beer</div>
 </div>
 </div>

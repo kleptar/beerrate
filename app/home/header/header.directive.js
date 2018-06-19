@@ -1,7 +1,9 @@
 angular.module("beer-rate.home").directive("header", function(){
     return{
         restrict: "E",
-        scope: {},
+        scope: {
+            beers: "="
+        },
         bindToController: true, 
         controller: "HeaderController",
         controllerAs: "vm",

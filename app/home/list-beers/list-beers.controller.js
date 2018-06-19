@@ -1,12 +1,13 @@
-angular.module("beer-rate.home").controller("ListBeerController", function(){
+angular.module("beer-rate.home").controller("ListBeerController", function($stateParams){
     var vm = this;
+
     vm.beersToShow = [];
     var activeBeer = resetActiveBeer();
     var idPrefix = "beer-in-row-";
     var activeClass = "active";
 
     vm.initBeerList = function(){
-        vm.beersToShow = vm.beers;
+        vm.beersToShow = $stateParams.beers;//vm.beers;
         angular.forEach(vm.beersToShow,function(value, key) {
             value.showDetails = false;
         }); 

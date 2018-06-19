@@ -1,18 +1,14 @@
 <div ng-init="vm.initBeerList()">
     <div class="row">
-        <header class="header"></header>
+        <header class="header" beers="vm.beers"></header>
     </div>
     <div class="row main">
             <div class="col-md-3">
                 <top-3 beers="vm.beers" ></top-3>
             </div>
             <div class="col-md-6">
-                
-                <list-beers beers="vm.beers"></list-beers>
-                
-                <!--<news></news>
-                
-                -->
+                <ui-view></ui-view>
+                <!--<list-beers beers="vm.beers"></list-beers>-->
             </div>
             <div class="col-md-3">
                 <craft-of-the-week beer="vm.beerOfTheWeek" props-beer="vm.propsThisBeer"></craft-of-the-week>
