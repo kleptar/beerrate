@@ -1,9 +1,17 @@
-<div>
-    <img src="/app/home/craft-of-the-week/img/crafetoftheweek.jpg">
-    <div class="caption">
+<div class="card">
+    
+    <div class="card-header">
         <h3>Beer for today</h3>
-        <p>{{vm.beer.name}}    [{{vm.beer.brewery}}]</p>
+        <img src="/app/home/craft-of-the-week/img/crafetoftheweek.jpg">
+    </div>
+    <div class="card-body">
+        <div "card text-white bg-primary mb-3">
+            <p>{{vm.beer.name}}    [{{vm.beer.brewery}}]</p>
+            <p>{{vm.beerShortDescription()}}</p>
+        </div>
+        <div "card text-white bg-primary mb-3"></div>
         <button type="button" class="btn btn-default btn-lg"  ng-click="vm.propsTheBeerForToday()">
-                <i class="fas fa-thumbs-up"></i> Like it!</button>
+            <i class="fas fa-thumbs-up"></i> Like it!</button>
+        </div>
     </div>
 </div>
