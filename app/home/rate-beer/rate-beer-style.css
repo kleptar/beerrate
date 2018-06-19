@@ -1,0 +1,10 @@
+.rateBeerItem {
+    margin-bottom: 30px;
+}
+
+.likeBeer {
+    position: absolute;
+    right: 30px;
+    margin:0;
+    padding: 0;
+}

@@ -34,7 +34,12 @@ angular.module("beer-rate.home").config(function ($stateProvider){
    .state( "beer-rate-home-root.rate", {
            name: "beer-rate-home-root.rate",
            url: "\rate",
-           template: "<div><p>nothing here 2</p></div>"
+           params: {
+            beers: {}
+            },
+            controller: "RateBeerController",
+            controllerAs: "vm",
+           template: "<rate-beer></rate-beer>"
    })
     
     

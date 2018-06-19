@@ -2,7 +2,7 @@ angular.module("beer-rate.home").directive("listBeersDetails", function(){
     return{
         restrict: "E",
         scope: {
-            beer: "=",
+            beer: "="
         },
         bindToController: true, // valid from 1.5...?
         controller: "ListBeerDetailsController",

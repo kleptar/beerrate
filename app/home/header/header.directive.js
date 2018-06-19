@@ -2,7 +2,8 @@ angular.module("beer-rate.home").directive("header", function(){
     return{
         restrict: "E",
         scope: {
-            beers: "="
+            beers: "=",
+            propsBeer: "&"
         },
         bindToController: true, 
         controller: "HeaderController",
